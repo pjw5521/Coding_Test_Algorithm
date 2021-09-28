@@ -1,3 +1,4 @@
+# 풀이 다양
 n = int(input())
 x, y = 1,1 
 plans = input().split()
