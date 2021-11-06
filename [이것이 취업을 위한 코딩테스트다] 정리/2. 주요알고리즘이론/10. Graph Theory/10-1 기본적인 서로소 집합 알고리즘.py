@@ -6,6 +6,14 @@ def find_parent(parent,x):
         return find_parent(parent,parent[x])
     return x 
 
+'''
+def find_parent(parent,x):
+    # 루트 노드가 아니면 재귀적으로 호출
+    if parent[x] != x :
+        return find_parent(parent,parent[x])
+    return x 
+'''
+
 # 두 원소가 속한 집합 합치기, 루트 노드가 작은 걸로 루트 노드 변경 
 def union_parent(parent,a,b):
     a = find_parent(parent,a)
