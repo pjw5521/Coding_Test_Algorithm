@@ -1,5 +1,7 @@
 # 문제 332쪽
 # https://www.acmicpc.net/problem/15686
+# 조합 사용 
+
 from itertools import combinations 
 
 INF = int(1e9)

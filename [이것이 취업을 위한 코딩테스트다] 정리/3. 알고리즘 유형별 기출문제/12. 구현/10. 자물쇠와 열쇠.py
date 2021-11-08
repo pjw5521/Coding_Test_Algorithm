@@ -21,7 +21,6 @@ def check(new_lock):
   
   return True
 
-
 def solution(key,lock):
   n = len(lock)
   m = len(key)
