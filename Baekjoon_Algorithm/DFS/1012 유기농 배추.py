@@ -1,3 +1,4 @@
+https://www.acmicpc.net/problem/1012
 test_case = int(input())
 
 def dfs(x, y):

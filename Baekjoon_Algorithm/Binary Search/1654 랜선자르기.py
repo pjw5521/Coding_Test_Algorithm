@@ -1,4 +1,5 @@
 # 문제 https://www.acmicpc.net/problem/1654
+# 두번 품 
 import sys
 sys.setrecursionlimit(10000)
 r =  sys.stdin.readline

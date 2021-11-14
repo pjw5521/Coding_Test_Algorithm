@@ -1,4 +1,5 @@
 # 문제 https://www.acmicpc.net/problem/1920
+# 두번 품 
 n = int(input())
 A = set(map(int,input().split()))
 
