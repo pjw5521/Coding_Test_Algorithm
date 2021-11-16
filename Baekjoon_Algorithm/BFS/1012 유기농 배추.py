@@ -34,4 +34,3 @@ for _ in range(test_num):
         count += 1 
 
   print(count)
-
