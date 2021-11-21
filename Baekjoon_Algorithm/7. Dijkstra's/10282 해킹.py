@@ -1,23 +1,12 @@
-#https://www.acmicpc.net/problem/1916
-# 플로이드 워셜로 풀면 시간 초과 
+# https://www.acmicpc.net/problem/10282
 import heapq
 import sys
 input = sys.stdin.readline
 
-n = int(input())
-m = int(input())
-INF = int(1e9)
+test_num = int(input())
 
-graph = [ [] for _ in range(n+1) ]
-distance = [INF] * (n+1)
-
-for _ in range(m):
-  a,b,c = map(int,input().split())
-  graph[a].append((b,c))
-
-start, end = map(int,input().split())
-
-def dijkstra(start):
+def dijkstra(graph, start):
+  distance = [INF] * (n+1)
   q = []
   heapq.heappush(q, (0,start))
   distance[start] = 0
@@ -32,7 +21,23 @@ def dijkstra(start):
       if cost < distance[i[0]]:
         distance[i[0]] = cost
         heapq.heappush(q, (cost,i[0]))
+  cnt = 0
+  result = 0
+  for i in distance:
+    if i != INF:
+      cnt += 1
+      result = max(result,i)
+  print(cnt, result)
 
-dijkstra(start)
+for _ in range(test_num):
+  n, d, c = map(int,input().split())
+  
+  INF = int(1e9)
 
-print(distance[end])
+  graph = [ [] for _ in range(n+1) ]
+  
+  for _ in range(d):
+    a, b, s = map(int,input().split())
+    graph[b].append((a,s))
+
+  dijkstra(graph, c)

@@ -1,23 +1,24 @@
-#https://www.acmicpc.net/problem/1916
-# 플로이드 워셜로 풀면 시간 초과 
-import heapq
+# https://www.acmicpc.net/problem/1504
+# 양방향 경로임 
 import sys
 input = sys.stdin.readline
+import heapq
 
-n = int(input())
-m = int(input())
+n, e = map(int,input().split())
+
 INF = int(1e9)
 
 graph = [ [] for _ in range(n+1) ]
-distance = [INF] * (n+1)
 
-for _ in range(m):
-  a,b,c = map(int,input().split())
+for _ in range(e):
+  a, b, c = map(int,input().split())
   graph[a].append((b,c))
+  graph[b].append((a,c))
 
-start, end = map(int,input().split())
+v1, v2 = map(int,input().split())
 
-def dijkstra(start):
+def dijkstra(start, end):
+  distance = [INF] * (n+1)
   q = []
   heapq.heappush(q, (0,start))
   distance[start] = 0
@@ -32,7 +33,13 @@ def dijkstra(start):
       if cost < distance[i[0]]:
         distance[i[0]] = cost
         heapq.heappush(q, (cost,i[0]))
+  
+  return distance[end]
 
-dijkstra(start)
+result1 = dijkstra(1, v1) + dijkstra(v1, v2) + dijkstra(v2,n)
+result2 =  dijkstra(1, v2) + dijkstra(v2, v1) + dijkstra(v1,n)
 
-print(distance[end])
+if result1 >= INF and result2 >= INF:
+  print(-1)
+else:
+  print(min(result1, result2))
