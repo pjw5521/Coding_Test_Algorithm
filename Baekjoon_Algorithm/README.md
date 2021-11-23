@@ -14,3 +14,11 @@
     + ex) product = list(product(data,repeat = m ))
 - 중복 조합 : from itertools import combinations_with_replacement
     + ex) ex ) combine = list(combinations_with_replacement(data,m))
+
+## deque
+- from collections import deque
+    + append() : 왼쪽에 추가
+    + appendleft() : 오른쪽에 추가 
+    + pop() : 제일 오른쪽 data 꺼내기
+    + popleft() : 제일 왼쪽 data 꺼내기
+    + len(q) : 큐 사이즈 
