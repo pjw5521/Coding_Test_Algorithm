@@ -28,3 +28,10 @@
     + pop() : 제일 오른쪽 data 꺼내기
     + popleft() : 제일 왼쪽 data 꺼내기
     + len(q) : 큐 사이즈 
+
+## enumerate 함수 
+-  리스트의 순서와 값을 전달하는 함수 
+
+## dictionary 
+- key와 value를 한 쌍으로 가지는 자료형 : { key1 : value1, key2 : value2, ... }
+- 정렬 : sorted 사용 
