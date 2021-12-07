@@ -1,4 +1,5 @@
 #https://programmers.co.kr/learn/courses/30/lessons/42889#
+# 프로그래머스와 replit에서 같은 코드 실행 값이 다름 ... 
 
 def solution(N, stages):
     answer = []

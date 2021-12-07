@@ -35,3 +35,5 @@
 ## dictionary 
 - key와 value를 한 쌍으로 가지는 자료형 : { key1 : value1, key2 : value2, ... }
 - 정렬 : sorted 사용 
+    + sorted(dic, key = lambda x : dic[x]) : value값 기준으로 정렬 후 key 반환 
+    + dict(sorted(dic, key = lambda x : (x[0],x[1]))): key, value 모두 기준으로 사용 시 
