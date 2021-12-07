@@ -37,3 +37,10 @@
 - 정렬 : sorted 사용 
     + sorted(dic, key = lambda x : dic[x]) : value값 기준으로 정렬 후 key 반환 
     + dict(sorted(dic, key = lambda x : (x[0],x[1]))): key, value 모두 기준으로 사용 시 
+
+## 사용한 함수 모음 
+- zfill(n) : 자리수가 n이 되도록 앞에 0 추가
+- "".join(n) : 배열의 값 사이에 ""안에 들어있는 문자를 추가해서 출력 
+- isdigit(), isalpha() 
+- upper(), lower()
+- count()
