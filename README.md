@@ -41,6 +41,17 @@
 ## 사용한 함수 모음 
 - zfill(n) : 자리수가 n이 되도록 앞에 0 추가
 - "".join(n) : 배열의 값 사이에 ""안에 들어있는 문자를 추가해서 출력 
-- isdigit(), isalpha() 
-- upper(), lower()
-- count()
+- isdigit(), isalpha() : 숫자인지 문자인지 판별 
+- upper(), lower() : 소문자, 대문자 변환 
+- count() : 개수 반환 
+- zip(,) : 객체를 인자로 받고, 각 객체가 담고 있는 원소들을 튜플의 형태로 차례대로 접근할 수 있는 반복자를 반환 
+    ```python
+    # 예시 
+    numbers = [1, 2, 3]
+    letters = ["A", "B", "C"]
+    for pair in zip(numbers, letters):
+        print(pair)
+    (1, 'A')
+    (2, 'B')
+    (3, 'C')
+    ```
