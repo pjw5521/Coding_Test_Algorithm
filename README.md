@@ -37,7 +37,12 @@
 - 정렬 : sorted 사용 
     + sorted(dic, key = lambda x : dic[x]) : value값 기준으로 정렬 후 key 반환 
     + dict(sorted(dic, key = lambda x : (x[0],x[1]))): key, value 모두 기준으로 사용 시 
-
+- defaultdict() : 기본값이 있는 딕셔너리 
+    + from collections import defaultdict
+    + defaultdict()은 인자로 주어진 객체의 기본값을 딕셔너리의 초깃값으로 지정 가능
+    + int, list, set 등으로 초기화 가능
+    + 예를 들어 defaultdict(int)일 경우, 값을 지정하지 않은 키는 그 값이 0으로 지정 
+    
 ## 사용한 함수 모음 
 - zfill(n) : 자리수가 n이 되도록 앞에 0 추가
 - "".join(n) : 배열의 값 사이에 ""안에 들어있는 문자를 추가해서 출력 
