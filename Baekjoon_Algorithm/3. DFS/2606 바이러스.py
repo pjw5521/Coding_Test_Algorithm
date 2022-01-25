@@ -22,3 +22,34 @@ for i in range(network):
 
 dfs(1)
 print(count)
+
+''' bfs 코드 
+from collections import deque
+
+c = int(input())
+
+num = int(input())
+
+data = [ [0] * (c+1) for _ in range(c+1)]
+
+for _ in range(num):
+  a, b = map(int,input().split())
+  data[a][b] = 1
+  data[b][a] = 1 
+
+visited = [False] * (c+1)
+
+queue = deque()
+
+queue.append(1)
+visited[1] = True
+
+while queue:
+  v = queue.popleft()
+  for i in range(1,c+1):
+    if data[v][i] == 1 and visited[i] == False:
+      queue.append(i)
+      visited[i] =True
+
+print(visited.count(1)-1)
+'''
