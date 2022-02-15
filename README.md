@@ -73,7 +73,7 @@
     + 가장 작은 원소가 제일 먼저 삭제 
 - import heapq
 - 원소 추가 : heapq.heappush( 리스트 이름, 원소 )
-- 원소 삭제 : heapq.pop( 리스트 이름 ) 
+- 원소 삭제 : heapq.heappop( 리스트 이름 ) 
 
 ## 스택 자료구조 
 - 가장 나중에 들어온 자료가 가장 먼저 처리되는 *LIFO(Last-In-First-Out)* 자료구조 
