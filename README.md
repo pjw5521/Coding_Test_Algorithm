@@ -65,7 +65,10 @@
     (3, 'C')
     ```
 - remove(a) : 리스트에서 a원소 제거
-
+- Counter(a) : 리스트에서 등장하는 알파벳을 key, 개수를 value로 하는 딕셔너리 반환 
+    + from collections import Counter
+- discard(a), remove(a) : set에서 원소 삭제.
+    + discard는 집합에 a라는 원소가 없어도 에러 발생 x, remove는 에러 발생 o 
 ## 힙 자료구조
 - 최소 힙 자료구조 제공 
     + 원소들이 항상 정렬된 상태로 추가되고, 삭제 
