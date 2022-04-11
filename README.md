@@ -50,7 +50,8 @@
 - zfill(n) : 자리수가 n이 되도록 앞에 0 추가
 - "".join(n) : 배열의 값 사이에 ""안에 들어있는 문자를 추가해서 출력 
     + int일 경우 str로 변환해서 출력해야 함 : "". join(map(str,n))
-- isdigit(), isalpha() : 숫자인지 문자인지 판별 
+- isdigit() : 숫자인지 판별 
+- isalpha() : 영어 또는 한글로만 이루어져 있는지 확인. 공백, 특수문자, 숫자가 포함되어 있으면 False 
 - upper(), lower() : 소문자, 대문자 변환 
 - count() : 개수 반환 
 - zip(,) : 객체를 인자로 받고, 각 객체가 담고 있는 원소들을 튜플의 형태로 차례대로 접근할 수 있는 반복자를 반환 
@@ -69,6 +70,8 @@
     + from collections import Counter
 - discard(a), remove(a) : set에서 원소 삭제.
     + discard는 집합에 a라는 원소가 없어도 에러 발생 x, remove는 에러 발생 o 
+- ord(문자), chr(숫자) : 문자, 숫자의 아스키 코드 반환 
+- bin(숫자), oct(숫자), hex(숫자) : 2진수, 8진수, 16진수 변환
 
 ## 힙 자료구조
 - 최소 힙 자료구조 제공 
