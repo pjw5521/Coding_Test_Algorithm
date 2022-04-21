@@ -51,7 +51,7 @@ def bfs(board, start, end):
             # 범위를 벗어나지 않았고, 방문하지 않았으면 
             if 0 <= nx < 4 and 0 <= ny < 4 and not visited[nx][ny] :
                 q.append((nx,ny,cnt+1))
-                visitied[nx][ny] = 1
+                visited[nx][ny] = 1
             
             # 컨트롤 누르고 이동할 때 위치 
             cx, cy = ctrl_move(board, x, y, dx[i], dy[i])
