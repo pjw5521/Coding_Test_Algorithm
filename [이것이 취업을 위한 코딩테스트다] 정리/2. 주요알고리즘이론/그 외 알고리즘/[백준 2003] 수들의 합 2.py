@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/1208
+# 투 포인터 예제 
 n, m = map(int,input().split())
 
 data = list(map(int,input().split()))

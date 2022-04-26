@@ -1,16 +1,19 @@
 # https://www.acmicpc.net/problem/15650
-# 조합 
-import sys
-from itertools import combinations
-input = sys.stdin.readline
+def dfs(num, s):
+    if len(s) == m:
+        print(" ".join(map(str,s)))
+        return 
+        
+    for i in range(num,n+1):
+        if not visited[i]:
+            visited[i] = True
+            s.append(i)
+            dfs(i,s)
+            s.pop()
+            visited[i]=False
+            
+n, m = map(int,input().split())
 
-n ,m = map(int,input().split())
-
-data = [ i+1 for i in range(n)]
-
-combine = list(combinations(data,m))
-
-combine .sort()
-
-for i in combine:
-  print(*i)
+visited = [False] * (n+1)
+s = []
+dfs(1, s)

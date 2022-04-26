@@ -1,16 +1,15 @@
 # https://www.acmicpc.net/problem/15652
-# 중복 조합 
-import sys
-from itertools import combinations_with_replacement
-input = sys.stdin.readline
+def dfs(num,s):
+  if len(s) == m:
+    print(" ".join(map(str,s)))
+    return
+  
+  for i in range(num,n+1):
+    s.append(i)
+    dfs(i,s)
+    s.pop()
+    
+n, m = map(int,input().split())
+s = []
+dfs(1, s)
 
-n ,m = map(int,input().split())
-
-data = [ i+1 for i in range(n)]
-
-combine = list(combinations_with_replacement(data, m))
-
-combine .sort()
-
-for i in combine:
-  print(*i)
