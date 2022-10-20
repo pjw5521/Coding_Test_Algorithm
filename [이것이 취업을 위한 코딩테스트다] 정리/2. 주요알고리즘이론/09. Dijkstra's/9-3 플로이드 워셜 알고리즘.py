@@ -6,7 +6,6 @@ n, m = map(int,input().split())
 
 # 2차원으로 그래프 표현 
 graph = [ [INF] * (n+1) for _ in range(n+1)]
-distance = [INF] * (n+1)
 
 # 자기 자신에서 자기 자신으로 가는 비용 0으로 초기화 
 for a in range(1, n+1):
